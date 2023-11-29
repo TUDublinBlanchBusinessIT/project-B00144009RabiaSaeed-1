@@ -1,3 +1,5 @@
+//Enter this code into heidi//
+
 CREATE DATABASE flower_store;
 USE flower_store;
 
