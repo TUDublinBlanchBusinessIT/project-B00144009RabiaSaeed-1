@@ -10,6 +10,11 @@ echo "$firstName, $surName, $flowerType";
 
 $sql = "INSERT INTO orders (first_Name, sur_Name, flower_Type) VALUES ('$firstName', '$surName', '$flowerType')";
 
-echo $sql;
+//echo $sql;//
+
+mysqli_query($conn, $sql);
+mysqli_close($conn);
+
+echo "Information has been added"
 
 ?>
