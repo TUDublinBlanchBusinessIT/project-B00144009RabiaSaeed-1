@@ -11,4 +11,4 @@ flower_Type VARCHAR(60),
 PRIMARY KEY(id)
 );
 
-INSERT INTO flower(first_Name, sur_Name, flower_Type) VALUES ('Rachel', 'Phillips', Roses);
+INSERT INTO flower(first_Name, sur_Name, flower_Type) VALUES ('Rachel', 'Phillips', "Roses");
