@@ -1,17 +1,18 @@
 <?php
+include ('dbcon.php');
+
 
 $firstName = $_POST['firstName'];
 $surName = $_POST['surName'];
 $flowerType = $_POST['flowerType'];
 
-include ('dbcon.php');
+
 
 $sql = "INSERT INTO orders (first_Name, sur_Name, flower_Type) VALUES ('$firstName', '$surName', '$flowerType')";
 
-//echo $sql;//
 
-mysqli_query($conn, $sql);
-mysqli_close($conn);
+mysqli_query($con, $sql);
+mysqli_close($con);
 
 echo "Information has been added"
 
