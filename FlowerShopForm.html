@@ -1,15 +1,33 @@
 <!-- Code for the website -->
 <!-- first name, surname, and flower type is being added by user on screen -->
 <html>
+    
+    <head><link rel="stylesheet" href="FlowerShopDesign.css"></head>
     <body>
         <form action="ProcessFlowerShop.php" method="POST">
-            <h2>Enter your Details:</h2>
-            First name: <input type="text" name= "firstName"><br>
-            Surname:<input type="text" name= "surName"><br>
-            Flower Type:<input type="text" name= "flowerType"><br>
-            <input type="submit">
+            <img src="flowers.jpg" alt="Flower background" width="1350" height="200"><br><br>
+        
+            <div class="container">
+                <h2 align= "center"> Log in and order:</h2>
+                <p>Hello this is a online flower store, we sell roses,  </p>
+                First name: <br><input type="text" placeholder="Enter Firstname" name= "firstName"><br><br>
+                Surname:<br><input type="text" placeholder="Enter Surname" name= "surName"><br><br>
+                Date of Birth:<br><input type="text" placeholder="YYYY/MM/DD" name= "dob"><br><br>
+                Type of Flower: <SELECT name="flowertype">
+                    <OPTION value="1">Roses</OPTION>
+                    <OPTION value="Lilies">Lilies</OPTION>
+                    <OPTION value="Peonies">Peonies</OPTION>
+                    <OPTION value="Tulips">Tulips</OPTION>
+                    <OPTION value="Poppies">Poppies</OPTION>
+                </SELECT><br><br>
+                Color of Packaging: <br><input type="text" placeholder="Enter Color" name= "wrappingColor"><br><br>
+                Number of Flowers: <br><input type="text" placeholder="Enter Number" name= "numOfFlowers"><br><br>
+                Color of Flowers: <br><input type="text" placeholder="Enter Color" name= "colorOfFlowers"><br><br>
+                <!--Special Delivery: <input type="checkbox" name="SpecialDelivery" value="1" /><br><br>-->
+                <label><input type="checkbox" name="SpecialDelivery">Is this a Special Delivery?</label><br><br> 
+                
+                <input type="submit">
+            </div>
         </form>
-
     </body>
-
 </html>
