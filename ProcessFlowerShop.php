@@ -20,7 +20,7 @@ if (isset($_POST['flowertype'][0])) {
     $typeOfFlower = $_POST['flowertype'][0];
 } else {
     $typeOfFlower = '';
-}
+} 
 //data from form again//
 $colorofwrapping = $_POST['wrappingColor'];
 $numberOfflowers = $_POST['numOfFlowers'];
@@ -28,6 +28,14 @@ $colorOfFlowers = $_POST['colorOfFlowers'];
 //depending on whether it's 1 or 0. it's basically checking if specialdelivery in the post data//
 $SpecialDelivery = isset($_POST['SpecialDelivery']) ? 1 : 0;
 #$SpecialDelivery = isset($_POST['SpecialDelivery']) && $_POST['SpecialDelivery'] == '1';
+
+
+$sql = "INSERT INTO customer (first_Name, sur_Name, d_o_b, flower_Type) VALUES ('$firstName', '$surName', '$dob', '$typeOfFlower')";
+mysqli_query($conn, $sql);
+
+
+$sql = "INSERT INTO bouquet (color_of_wrapping, number_of_flowers, color_of_flowers) VALUES ('$colorofwrapping', $numberOfflowers, '$colorOfFlowers')";
+mysqli_query($conn, $sql);
 
 //The data that I'm getting from the form is stored in these session varaibles//
 $_SESSION['customerFirstName'] = $firstName;
